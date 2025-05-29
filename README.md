@@ -23,9 +23,6 @@
     <a href="#" class="cta-btn">Login</a>
   </nav>
 
-
-
-
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-about">
