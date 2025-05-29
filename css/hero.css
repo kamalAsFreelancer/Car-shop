@@ -1,0 +1,84 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.primary-btn {
+  background-color: #ff6a00;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #e65c00;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #ff6a00;
+  color: #ff6a00;
+}
+
+.secondary-btn:hover {
+  background-color: #ff6a00;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
