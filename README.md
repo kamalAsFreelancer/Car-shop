@@ -22,47 +22,6 @@
     </ul>
     <a href="#" class="cta-btn">Login</a>
   </nav>
-<!-- car-details.html -->
-<section class="car-detail">
-  <div class="detail-container">
-    <div class="image-gallery">
-      <img src="../img/ford.jpeg" alt="Car Image" class="main-image" />
-    </div>
-
-    <div class="car-info">
-      <h2>2018 Toyota Camry SE</h2>
-      <p class="price">$14,900</p>
-
-      <ul class="specs">
-        <li><strong>Year:</strong> 2018</li>
-        <li><strong>Mileage:</strong> 45,000 miles</li>
-        <li><strong>Transmission:</strong> Automatic</li>
-        <li><strong>Fuel Type:</strong> Gasoline</li>
-        <li><strong>Color:</strong> Black</li>
-      </ul>
-
-      <p class="description">
-        Clean title. No accidents. Regularly serviced. Excellent condition both inside and out. Great for commuting and long drives.
-      </p>
-
-      <div class="seller-info">
-        <h4>Seller: John Doe</h4>
-        <p>Email: johndoe@example.com</p>
-        <p>Phone: +1 234 567 890</p>
-      </div>
-
-      <a href="#" class="contact-btn">Contact Seller</a>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 
 
 
