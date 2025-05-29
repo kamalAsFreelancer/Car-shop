@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Buy & Sell</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!--nav-->
+  <nav class="navbar">
+    <div class="logo">CarZone</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Buy</a></li>
+      <li><a href="#">Sell</a></li>
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#" class="cta-btn">Login</a>
+  </nav>
+
+<!-- browse.html -->
+<section class="browse-header">
+  <h1>Browse Cars for Sale</h1>
+  <form class="filter-form">
+    <input type="text" placeholder="Search by make or model" />
+    <select>
+      <option value="">All Types</option>
+      <option value="sedan">Sedan</option>
+      <option value="suv">SUV</option>
+      <option value="truck">Truck</option>
+    </select>
+    <select>
+      <option value="">Sort by Price</option>
+      <option value="low">Low to High</option>
+      <option value="high">High to Low</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+</section>
+
+<section class="listing-grid">
+  <div class="car-card">
+    <img src="../img/toyota.jpeg" alt="Car Image" />
+    <h3>2018 Toyota Camry</h3>
+    <p>$14,900 · 45,000 miles</p>
+    <a href="car-details.html">View Details</a>
+  </div>
+
+  <div class="car-card">
+    <img src="../img/Audi.jpeg" alt="Car Image" />
+    <h3>2020 Honda Civic</h3>
+    <p>$18,500 · 30,000 miles</p>
+    <a href="car-details.html">View Details</a>
+  </div>
+
+  <!-- Repeat for more listings -->
+</section>
+
+<!--footer-->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>CarHub</h3>
+      <p>Your trusted platform to buy and sell cars with ease and confidence.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse Cars</a></li>
+        <li><a href="#">Sell Your Car</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: Kamal Pahan</p>
+      <p>Phone: Contact Me</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Kamal Pahan. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
