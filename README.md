@@ -46,3 +46,7 @@ connection.connect((err) => {
     connection.end();
   });
 });
+
+
+NEXT_PUBLIC_SUPABASE_URL=https://qziackwiglwzyzfuvaak.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6aWFja3dpZ2x3enl6ZnV2YWFrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY5MDE4MTQsImV4cCI6MjA2MjQ3NzgxNH0.KraFmOQqeSrrVanQvsUfjBWvbrWYIS3WnbFzr18Q3_I
