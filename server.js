@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
-const connection = require('./src/firebase'); // path to your db.js
+const connection = require('./src/supabase'); // path to your db.js
 
 const app = express();
 const PORT = process.env.PORT || 3000;
