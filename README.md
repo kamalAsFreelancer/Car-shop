@@ -1,60 +1,48 @@
 # Car-shop
 # this is sample page for the components...
+const mysql = require('mysql2');
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Car Buy & Sell</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+// Set up MySQL connection
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'yourpassword',       // 🔁 change this
+  database: 'your_database_name'  // 🔁 change this
+});
 
-  <nav class="navbar">
-    <div class="logo">CarZone</div>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#">Buy</a></li>
-      <li><a href="#">Sell</a></li>
-      <li><a href="#">How It Works</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <a href="#" class="cta-btn">Login</a>
-  </nav>
+// Connect to DB and create the table
+connection.connect((err) => {
+  if (err) {
+    console.error('❌ Database connection failed:', err.message);
+    return;
+  }
 
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>CarHub</h3>
-      <p>Your trusted platform to buy and sell cars with ease and confidence.</p>
-    </div>
+  console.log('✅ Connected to MySQL');
 
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Browse Cars</a></li>
-        <li><a href="#">Sell Your Car</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
+  const createTableSQL = `
+    CREATE TABLE IF NOT EXISTS cars (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      brand VARCHAR(100),
+      model VARCHAR(100),
+      year INT,
+      mileage INT,
+      transmission VARCHAR(50),
+      fuel_type VARCHAR(50),
+      color VARCHAR(50),
+      price DECIMAL(10, 2),
+      description TEXT,
+      images TEXT,  -- Store image filenames (or links if stored on cloud)
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `;
+  
+  connection.query(createTableSQL, (err, result) => {
+    if (err) {
+      console.error('❌ Error creating table:', err.message);
+    } else {
+      console.log('✅ "cars" table created successfully');
+    }
 
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>Email: support@carhub.com</p>
-      <p>Phone: +1 234 567 890</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Kamal pahan. All rights reserved.</p>
-  </div>
-</footer>
-
-</body>
-</html>
+    connection.end();
+  });
+});
