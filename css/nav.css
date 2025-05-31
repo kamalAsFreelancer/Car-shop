@@ -1,0 +1,91 @@
+/* Toggle button styles */
+#menu-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #ff6a00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.3rem 0.5rem;
+    user-select: none;
+  }
+  
+  #menu-btn:hover,
+  #menu-btn:focus {
+    color: #e65c00;
+    outline: none;
+  }
+  
+  /* Mobile nav initial state */
+  body.mobile #mobile-nav {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #101820;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: max-height 0.4s ease;
+  }
+  
+  /* When open, reveal nav */
+  body.mobile #mobile-nav.open {
+    max-height: 500px; /* enough to show all items */
+    padding: 1rem 0;
+  }
+  
+  /* Nav links styling */
+  #mobile-nav li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #fffccc;
+    text-decoration: none;
+    border-top: 1px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #mobile-nav li a:hover {
+    background-color: #ff6a00;
+    color: white;
+  }
+  
+  /* Hide nav by default on mobile */
+#mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #101820;
+    padding: 1rem 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+  /* Show nav when open */
+  body.mobile #mobile-nav.open {
+    display: flex;
+  }
+  
+  #mobile-nav li a {
+    padding: 1rem 2rem;
+    color: #fffccc;
+    text-decoration: none;
+    border-top: 1px solid #333;
+  }
+  
+  #mobile-nav li a:hover {
+    background-color: #ff6a00;
+    color: white;
+  }
+  
+  /* Hide button on desktop/tablet */
+  body.tablet #menu-btn,
+  body.desktop #menu-btn {
+    display: none;
+  }
+  

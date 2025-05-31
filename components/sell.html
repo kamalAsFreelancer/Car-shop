@@ -2,18 +2,19 @@
 <section class="sell-car">
   <div class="form-container">
     <h2>Sell Your Car</h2>
-    <form action="#" method="POST" enctype="multipart/form-data">
-      <input type="text" placeholder="Enter your car brand" required />
-      <input type="text" placeholder="Car Module" required />
-      <input type="number" placeholder="Year" required />
-      <input type="number" placeholder="Mileage (in Kilometer)" required />
-      <input type="text" placeholder="Transmission (e.g., Automatic)" required />
-      <input type="text" placeholder="Fuel Type (e.g., Petrol or Diesel)" required />
-      <input type="text" placeholder="Color" required />
-      <input type="number" placeholder="Price in NPR" required />
-      <textarea placeholder="Description" rows="5" required></textarea>
-      <input type="file" multiple accept="image/*" required />
+    <form action="http://localhost:3000/api/cars" method="POST" enctype="multipart/form-data">
+      <input type="text" name="brand" placeholder="Enter your car brand" required />
+      <input type="text" name="model" placeholder="Car Model" required />
+      <input type="number" name="year" placeholder="Year" required />
+      <input type="number" name="mileage" placeholder="Mileage (in Kilometer)" required />
+      <input type="text" name="transmission" placeholder="Transmission" required />
+      <input type="text" name="fuel_type" placeholder="Fuel Type" required />
+      <input type="text" name="color" placeholder="Color" required />
+      <input type="number" name="price" placeholder="Price in NPR" required />
+      <input type="text" name="location" placeholder="Enter your location" required />
+      <textarea name="description" placeholder="Description" rows="5" required></textarea>
+      <input type="file" name="images" multiple accept="image/*" required />
       <button type="submit">Post Listing</button>
-    </form>
+    </form>    
   </div>
 </section>

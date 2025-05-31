@@ -8,7 +8,13 @@ function loadComponent(id, file) {
 }
 
 function loadHeader() {
-  loadComponent('header', 'components/header.html');
+  const width = window.innerWidth;
+
+  if (width > 768) {
+    loadComponent('header', 'components/mheader.html');
+  } else {
+    loadComponent('header', 'components/header.html');
+  }
 }
 function loadFooter() {
   loadComponent('footer', 'components/footer.html');
@@ -19,11 +25,11 @@ function loadContent(page) {
 
   // load css flies according to page
   if (page === 'browse') {
-    loadCSS(['browse.css', 'cardp.css']);
+    loadCSS(['browse.css', 'cardp.css', 'nav.css']);
   } else if (page === 'sell') {
-    loadCSS(['sell.css', 'cardp.css']);
+    loadCSS(['sell.css', 'cardp.css', 'nav.css']);
   } else if (page === 'login') {
-    loadCSS(['login.css', 'cardp.css']);
+    loadCSS(['login.css', 'cardp.css', 'nav.css']);
   } else {
     // Default or unknown page — remove dynamic CSS
     loadCSS([]);

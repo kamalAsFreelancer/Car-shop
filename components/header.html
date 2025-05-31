@@ -1,6 +1,7 @@
       <nav class="navbar">
-        <div class="logo">CarZone</div>
-        <ul class="nav-links">
+        <button id="menu-btn" aria-label="Toggle Menu" onclick="toggleMenu()">☰ Menu</button>
+        <div class="logo"><a href="#" onclick="loadContent('featured')">CarZone</a></div>
+        <ul class="nav-links" id="mobile-nav">
           <li><a href="#" onclick="loadContent('featured')">Home</a></li>
           <li><a href="#" onclick="loadContent('browse')">Buy</a></li>
           <li><a href="#" onclick="loadContent('sell')">Sell</a></li>
