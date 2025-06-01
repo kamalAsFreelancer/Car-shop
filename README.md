@@ -48,5 +48,5 @@ connection.connect((err) => {
 });
 
 
-NEXT_PUBLIC_SUPABASE_URL=https://qziackwiglwzyzfuvaak.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6aWFja3dpZ2x3enl6ZnV2YWFrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY5MDE4MTQsImV4cCI6MjA2MjQ3NzgxNH0.KraFmOQqeSrrVanQvsUfjBWvbrWYIS3WnbFzr18Q3_I
+public key - hvhfbqfa
+private key - 10fe71e2-c8ca-4051-aa16-f2616de7bc22
