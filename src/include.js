@@ -19,7 +19,6 @@ function loadHeader() {
 function loadFooter() {
   loadComponent('footer', 'components/footer.html');
 }
-
 function loadContent(page) {
   loadComponent('main-content', `components/${page}.html`);
 
@@ -30,9 +29,15 @@ function loadContent(page) {
     loadCSS(['sell.css', 'cardp.css', 'nav.css']);
   } else if (page === 'login') {
     loadCSS(['login.css', 'cardp.css', 'nav.css']);
+  } else if (page === 'car-details') {
+      loadComponent('recom', 'components/recomanded.html');
+      loadCSS(['recom.css', 'cardp.css', 'nav.css']);
+  } else if (page === 'signup') {
+      loadComponent('recom', 'components/recomanded.html');
+      loadCSS(['recom.css', 'cardp.css', 'nav.css','login.css', 'signup.css']);
   } else {
     // Default or unknown page — remove dynamic CSS
-    loadCSS([]);
+    loadCSS(['style.css', 'cardp.css', 'nav.css', 'footer.css', 'header.css', 'featured.css', 'browse.css', 'sell.css', 'login.css', 'signup.css',]);
   }
 }
 
@@ -40,5 +45,5 @@ function loadContent(page) {
 window.addEventListener('DOMContentLoaded', () => {
   loadHeader();
   loadFooter();
-  loadContent('featured');  // Default content
+  loadContent('car-details');  // Default content
 });

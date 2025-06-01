@@ -1,15 +1,15 @@
-import { supabase } from './supabase.js';
+// const Car = require('../src/cars');
 
-export async function addCarListing(carData) {
-  const { data, error } = await supabase
-    .from('cars')
-    .insert([carData]);
+// async function addCarListing(carData) {
+//   try {
+//     const newCar = new Car(carData);
+//     const savedCar = await newCar.save();
+//     console.log('🚗 Car listing saved:', savedCar);
+//     return savedCar;
+//   } catch (error) {
+//     console.error('❌ Failed to save car:', error);
+//     throw error;
+//   }
+// }
 
-  if (error) {
-    console.error('Error adding car listing:', error);
-    throw error;
-  }
-
-  console.log('Car listing added:', data);
-  return data;
-}
+// module.exports = { addCarListing };

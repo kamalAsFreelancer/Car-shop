@@ -1,0 +1,48 @@
+.recommended {
+    padding: 2rem 8%;
+    background-color: #f1f1f1;
+  }
+  
+  .recommended h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .car-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .car-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .car-card button {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .car-card button:hover {
+    background-color: #e95c00;
+  }
+  

@@ -18,29 +18,3 @@
     </form>    
   </div>
 </section>
-
-<script>
-
-document.querySelector('form').addEventListener('submit', async (e) => {
-  e.preventDefault()
-  
-  const carData = {
-    brand: e.target.brand.value,
-    model: e.target.model.value,
-    year: Number(e.target.year.value),
-    mileage: Number(e.target.mileage.value),
-    transmission: e.target.transmission.value,
-    fuel_type: e.target.fuel_type.value,
-    color: e.target.color.value,
-    price: Number(e.target.price.value),
-    description: e.target.description.value,
-    location: e.target.location.value,
-    images: [], // Handle image upload separately
-  }
-  
-  await addCarListing(carData)
-  alert('Car listing posted!')
-  e.target.reset()
-})
-
-</script>

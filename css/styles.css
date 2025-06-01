@@ -11,6 +11,9 @@
 @import url('cardp.css');
 @import url('nav.css');
 @import url('mainnav.css');
+@import url('recom.css');
+@import url('footer.css');
+
 
 * {
   margin: 0;

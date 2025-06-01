@@ -32,7 +32,7 @@
 }
 
 .form-toggle button:hover {
-  background: #ddd;
+  background: #c8c5c5;
 }
 
 .auth-form {
@@ -59,9 +59,10 @@
 }
 
 .auth-form button:hover {
-  background-color: #e55c00;
+  background-color: #b7500c;
 }
 
 .hidden {
   display: none;
 }
+
